@@ -32,7 +32,4 @@ COPY data/pbmc3k.h5ad /data/
 COPY ./cellxgeneVIP.sh /home
 RUN chmod +x /home/cellxgeneVIP.sh
 
-
-
-
-EXPOSE 5005
+# EXPOSE 80

@@ -3,12 +3,12 @@ services:
 
   cellxgene:
       container_name: cellxgene
-      image: kingtonduo/cellxgene:1.0
+      image: kingstonduo/cellxgene:1.0
       ports:
         - 5005:5005
-        - 80:80
+        # - 80:80
       environment:
         - "TZ:America/Detroit"
-      # volumes:
-      #   - ~./data/:/data
-      # command: /home/cellxgeneVIP.sh /data/pbmc3k.h5ad
+      volumes:
+        - /home/cregern/cellxgene_VIP/:/home
+      command: /home/cellxgeneVIP.sh /data/pbmc3k.h5ad
